@@ -1,0 +1,49 @@
+<div class="container mt-3 mb-3">
+  <!-- NAV -->
+  <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-2 mt-5">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">View User</li>
+    </ol>
+  </nav>
+
+  <% data.forEach((user)=>{ %>
+  <div class="p-5">
+    <div class="row mb-5">
+      <div class="col text-center">
+        <p class="h3"><%= user.first_name %> <%= user.last_name %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><%= user.first_name %></th>
+              <td><%= user.last_name %></td>
+              <td><%= user.email %></td>
+              <td><%= user.phone %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col">
+          <b>Comments</b>
+        </div>
+        <div class="row">
+          <div class="col"><%= user.comments %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>

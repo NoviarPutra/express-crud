@@ -1,0 +1,21 @@
+<div class="container mt-3 mb-3">
+  <div class="container mb-2 mt-5">
+    <% if(alert){ %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= alert %>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<script>
+  setTimeout(() => {
+    window.location = "/";
+  }, 5000);
+</script>

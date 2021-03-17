@@ -1,0 +1,98 @@
+<div class="container mt-3 mb-3">
+  <!-- NAV -->
+  <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-2 mt-5">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+  <!-- ALERT -->
+  <% if(alert){ %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= alert %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <% } %>
+  <!-- FORM -->
+  <form
+    class="row g-3 needs-validation"
+    action="/addUser"
+    method="POST"
+    novalidate
+  >
+    <div class="col-6">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="first_name"
+          name="first_name"
+          placeholder="First Name"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <label for="first_name">First Name</label>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="last_name"
+          name="last_name"
+          placeholder="last_name"
+          autocomplete="off"
+        />
+        <label for="last_name">Last Name</label>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Email"
+          autocomplete="off"
+        />
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          name="phone"
+          placeholder="Phone"
+          autocomplete="off"
+        />
+        <label for="phone">Phone</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="floatingTextarea2"
+          name="comments"
+          style="height: 100px"
+        ></textarea>
+        <label for="floatingTextarea2">Comments</label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
